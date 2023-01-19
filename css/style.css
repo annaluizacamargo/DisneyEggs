@@ -1,0 +1,22 @@
+:root {
+    --azul-1: #C0D4DF;
+    --azul-2: #91C7E5;
+    --azul-3: #6AABCE;
+    --azul-4: #005684;
+    --azul-5: #140431;
+    --white: #EAEAEA;
+    --black: #000000;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Josefin Slab', serif;;
+}
+
+
+
+
+
