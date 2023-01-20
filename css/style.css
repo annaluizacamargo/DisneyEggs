@@ -8,13 +8,68 @@
     --black: #000000;
 }
 
+html {
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(
+        45deg,
+        var(--azul-1) 0%,
+        var(--azul-1) 50%,
+        var(--azul-3) 50%,
+        var(--azul-3) 100%
+        );
+}
 
-html, body {
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     font-family: 'Josefin Slab', serif;;
 }
+
+header {
+    width: 100%;
+    display: flex;
+    
+}
+
+.header {
+    height: 5rem;
+    background-color: red;
+}
+
+h1 {
+    padding: 0;
+    margin: auto;
+    width: fit-content;
+    max-width: 50%;    
+}
+
+.logo {
+    width: 100%;
+    margin: auto 0;
+}
+
+.input {
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+    border: 0.5rem var(--white) solid;
+}
+
+#input-personagem{
+    max-width: 50%;
+    height: 1.5rem;
+    width: 90%;
+}
+
+#busca {
+    width: 10%;
+    height: 1.5rem;
+}
+
 
 
 
