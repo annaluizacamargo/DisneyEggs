@@ -65,9 +65,16 @@ img.logo {
     background-color: var(--white);
 }
 
-#busca {
-    height: 1.5rem;
+.fa-solid {
+    font-size: 1.5rem;
     padding: 0 1rem;
+    color: var(--azul-5);
+}
+
+#busca:hover {
+    cursor: pointer;
+    color: var(--azul-4);
+    transform: scale(1.3);
 }
 
 .principal {
