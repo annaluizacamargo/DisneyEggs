@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Open+Sans&display=swap');
 
 :root {
     --azul-1: #C0D4DF;
@@ -11,17 +11,11 @@
     --font-style: 'Josefin Slab', serif;
 }
 
-html {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left bottom, var(--azul-3) 50%, var(--azul-2) 50%);
-}
 
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
     font-family: var(--font-style); 
+    background: linear-gradient(to left bottom, var(--azul-3) 50%, var(--azul-2) 50%);
+
 }
 
 header {
@@ -62,12 +56,13 @@ img.logo {
     background-color: var(--white);
 }
 
-#input-personagem{
+#input-personagem {
     border-radius: 30px;
     padding: 0.25rem 0 0.25rem 1rem ;
     width: calc(100% - 1.5rem - 2rem);
     height: 1.5rem;
     border: none;
+    background-color: var(--white);
 }
 
 #busca {
@@ -78,12 +73,43 @@ img.logo {
 .principal {
     background-color: var(--white);
     margin: 1rem 3rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
     border-radius: 30px;
 }
 
+h2 {
+    font-size: 1.25rem;
+    text-align: justify;
+    line-height: 2.3rem;
+    font-family: 'Open Sans',sans-serif;
+}
 
+.api {
+    margin: 2rem 0;
+    display: flex;
+    height: fit-content;    
+}
 
+#img-api {
+    border-top-left-radius: 50px;
+    width: 40%;
+}
 
+.texto-api {
+    padding: 2rem 3rem;
+    background-color: var(--azul-1);
+    width: 60%;
+    border-bottom-right-radius: 50px;
+}
 
+#name-api {
+    color: var(--azul-4);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#movies-api {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
 
