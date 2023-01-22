@@ -116,6 +116,15 @@ h2 {
     display: flex;
 }
 
+#img-link-api {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .div-img {
     width: 30%;
     padding: 3rem;
