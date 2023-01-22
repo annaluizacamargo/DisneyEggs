@@ -1,7 +1,8 @@
-//COLOCAR BARREIRA PARA PESQUISA SEM RETORNO
-
 const nomePersonagemInput = document.getElementById("input-personagem");
 const btnBusca = document.getElementById("busca");
+const nomePersonagem = document.getElementById("name-api");
+const filmesPersonagem = document.getElementById("movies-api");
+const imgPersonagem = document.getElementById("img-api");
 let nomeTransformado = "";
 
 nomePersonagemInput.addEventListener("keypress", function(event) {
@@ -11,6 +12,8 @@ nomePersonagemInput.addEventListener("keypress", function(event) {
   });
 btnBusca.addEventListener("click", transformaNomePersonagem);
 
+
+//@ Função para transformar o nome do Personagem para API
 async function transformaNomePersonagem() {
     filmesPersonagem.innerHTML = "";
     let nome = nomePersonagemInput.value.toLowerCase();
@@ -20,43 +23,37 @@ async function transformaNomePersonagem() {
         .map(nome => nome.charAt(0).toUpperCase() + nome.slice(1))
         .join(" ");
     
-    await buscaImagemNASA();
-    nomePersonagemInput.value = "";    
+    await buscaPersonagemAPI();
+    nomePersonagemInput.value = "";
 }
 
-//IGNORAR ESPAÇOS APÓS NOME PERSONAGEM
+
 //@ Capturando os dados da API da Disney e integrando ao DOM
-async function buscaImagemNASA() {
+async function buscaPersonagemAPI() {
     const consultaDadosPersonagem = await fetch(`https://api.disneyapi.dev/character?name=${nomeTransformado}`);
     const dadosConvertidos = await consultaDadosPersonagem.json();
-    const arrayPersonagem = dadosConvertidos.data
-    console.log(arrayPersonagem)
+    const arrayPersonagem = dadosConvertidos.data;
+    const personagem = arrayPersonagem.find(indice => indice.name == nomeTransformado);
 
-    const personagem = arrayPersonagem.find((i) => {
-        return (i.name == nomeTransformado)
-    })
-    const arrayFilmes = personagem.films
-    const imgPersonagem = personagem.imageUrl
-
-    exibeNome(personagem.name)
-    exibeFilmes(arrayFilmes);
-    exibeFotoPersonagem(imgPersonagem);
+    exibeNome(personagem.name);
+    exibeFilmes(personagem.films);
+    exibeFotoPersonagem(personagem.imageUrl);
 }
 
-const nomePersonagem = document.getElementById("name-api");
-const filmesPersonagem = document.getElementById("movies-api");
-const imgPersonagem = document.getElementById("img-api");
 
+//@ Função para exibir o nome do Personagem
 function exibeNome(nome) {
     nomePersonagem.innerHTML = nome;
 }
 
+
+//@ Função para exibir a lista de filmes
 function exibeFilmes(arrayFilmes) {
-    arrayFilmes.map((filme)=> {
-        filmesPersonagem.innerHTML += `<li>${filme};</li>`;
-    })
+    arrayFilmes.map(filme => filmesPersonagem.innerHTML += `<li>${filme};</li>`);
 }
 
+
+//@ Função para exibir a foto do Personagem
 function exibeFotoPersonagem(imagemPersonagem) {
     imgPersonagem.setAttribute("src", imagemPersonagem);
 }
