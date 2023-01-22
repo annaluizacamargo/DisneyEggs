@@ -39,3 +39,7 @@ function exibeFilmes(arrayFilmes){
         filmesPersonagem.innerHTML += `<li>${filme};</li>`
     })
 }
+
+function exibeFotoPersonagem(imagemPersonagem){
+    imgPersonagem.setAttribute("src", imagemPersonagem)
+}
