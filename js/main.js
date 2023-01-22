@@ -29,3 +29,13 @@ async function buscaPersonagemAPI() {
     //console.log(dadosConvertidos)
     const arrayPersonagem = dadosConvertidos.data;
 }
+
+const nomePersonagem = document.getElementById("name-api")
+const filmesPersonagem = document.getElementById("movies-api")
+const imgPersonagem = document.getElementById("img-api")
+
+function exibeFilmes(arrayFilmes){
+    arrayFilmes.map((filme)=> {
+        filmesPersonagem.innerHTML += `<li>${filme};</li>`
+    })
+}
