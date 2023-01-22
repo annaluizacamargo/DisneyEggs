@@ -27,16 +27,17 @@ header {
     display: flex;
 }
 
-h1 {
-    margin: auto 0;
+a {
     width: 50%;
-    height: calc(100% - 2rem);
+    margin: auto 0;
+}
+
+h1 {
     padding: 1rem 0 1rem 2rem;
 }
 
 img.logo {
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 5rem;
 }
 
 .container-input {
@@ -54,6 +55,7 @@ img.logo {
     border: 2px outset var(--azul-3);
     justify-content: space-between;
     background-color: var(--white);
+    
 }
 
 #input-personagem {
