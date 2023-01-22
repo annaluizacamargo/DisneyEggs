@@ -34,37 +34,26 @@ async function buscaImagemNASA() {
     console.log(personagem)
     const arrayFilmes = personagem.films
     const imgPersonagem = personagem.imageUrl
-    console.log(arrayFilmes)
-    console.log(imgPersonagem)
 
-    //arrayPersonagem.forEach((i) => {
-    //    const nomePersonagens = i.name
-    //    console.log(nomePersonagens)
-    //    if(i.name == nomeTransformado){
-    //        const arrayFilmes = i.films
-    //        const imgPersonagem = i.imageUrl
-    //        exibeFilmes(arrayFilmes)
-    //        exibeFotoPersonagem(imgPersonagem)            
-    //        console.log("IGUAL")
-    //    }
-    //})
-
-    console.log(arrayPersonagem)
-    
-    //imgAPI.setAttribute("src", `${dadosConvertidos.url}`);
-    //linkImgAPI.setAttribute("href", `${dadosConvertidos.url}`);
+    exibeNome(personagem.name)
+    exibeFilmes(arrayFilmes);
+    exibeFotoPersonagem(imgPersonagem);
 }
 
-const nomePersonagem = document.getElementById("name-api")
-const filmesPersonagem = document.getElementById("movies-api")
-const imgPersonagem = document.getElementById("img-api")
+const nomePersonagem = document.getElementById("name-api");
+const filmesPersonagem = document.getElementById("movies-api");
+const imgPersonagem = document.getElementById("img-api");
 
-function exibeFilmes(arrayFilmes){
+function exibeNome(nome) {
+    nomePersonagem.innerHTML = nome;
+}
+
+function exibeFilmes(arrayFilmes) {
     arrayFilmes.map((filme)=> {
-        filmesPersonagem.innerHTML += `<li>${filme};</li>`
+        filmesPersonagem.innerHTML += `<li>${filme};</li>`;
     })
 }
 
-function exibeFotoPersonagem(imagemPersonagem){
-    imgPersonagem.setAttribute("src", imagemPersonagem)
+function exibeFotoPersonagem(imagemPersonagem) {
+    imgPersonagem.setAttribute("src", imagemPersonagem);
 }
