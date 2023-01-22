@@ -1,5 +1,6 @@
 const nomePersonagemInput = document.getElementById("input-personagem");
 const btnBusca = document.getElementById("busca");
+const containerAPI = document.querySelector(".api");
 const nomePersonagem = document.getElementById("name-api");
 const filmesPersonagem = document.getElementById("movies-api");
 const imgPersonagem = document.getElementById("img-api");
@@ -38,6 +39,7 @@ async function buscaPersonagemAPI() {
     exibeNome(personagem.name);
     exibeFilmes(personagem.films);
     exibeFotoPersonagem(personagem.imageUrl);
+    containerAPI.style.display = "block";
 }
 
 
@@ -49,7 +51,7 @@ function exibeNome(nome) {
 
 //@ Função para exibir a lista de filmes
 function exibeFilmes(arrayFilmes) {
-    arrayFilmes.map(filme => filmesPersonagem.innerHTML += `<li>${filme};</li>`);
+    arrayFilmes.map(filme => filmesPersonagem.innerHTML += `<li>${filme};</li><br>`);
 }
 
 

@@ -92,7 +92,7 @@ h2 {
 
 .api {
     margin: 2rem 0;
-    display: block; /*display: block*/
+    display: none; /*display: block*/
     height: fit-content;
     background-color: var(--azul-1);
     border-top-left-radius: 50px;
