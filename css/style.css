@@ -12,8 +12,8 @@
 }
 
 html {
-    width: 100%;
-    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 body {
@@ -57,7 +57,7 @@ img.logo {
 }
 
 #input-personagem {
-    background-color: var(--white);    
+    background-color: var(--white);
     border-radius: 30px;
     padding: 0.5rem 0 0.5rem 1rem;
     width: calc(100% - 1.5rem - 2rem);
@@ -92,29 +92,47 @@ h2 {
 
 .api {
     margin: 2rem 0;
-    display: flex;
+    display: block; /*display: block*/
     height: fit-content;
-}
-
-#img-api {
-    border-top-left-radius: 50px;
-    width: 40%;
-}
-
-.texto-api {
-    padding: 2rem 3rem;
     background-color: var(--azul-1);
-    width: 60%;
+    border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
 
 #name-api {
-    color: var(--azul-4);
-    font-size: 2.5rem;
+    background-color: var(--azul-4);
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: bold;
     text-align: center;
+    margin-bottom: 1rem;
+    border-top-left-radius: 50px;
+    padding: 1rem;
+}
+
+.texto-api {
+    display: flex;
+}
+
+.div-img {
+    width: 30%;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#img-api {
+    border-radius: 50%;
+    border: 5px var(--azul-3) inset;
+    max-height: 100%;
 }
 
 #movies-api {
     font-size: 1.5rem;
     margin-top: 1rem;
+    list-style: inside;
+    font-family: 'Open Sans',sans-serif;
+    color: var(--azul-5);
+    line-height: 2rem;
 }
