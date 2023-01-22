@@ -136,3 +136,66 @@ h2 {
     color: var(--azul-5);
     line-height: 2rem;
 }
+
+/*Responsividade*/
+@media (max-width: 769px) {
+    header {
+        display: inline;
+    }
+    
+    h1 {
+        margin: auto;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    img.logo {
+        max-width: calc(100% - 4rem);
+    }
+
+    .container-input {
+        width: 100%;
+    }
+    
+    .input {
+        margin: auto;
+        width: 80%;
+    }
+   
+    .principal {
+        margin: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    h2 {
+        font-size: medium;
+        text-align: justify;
+        line-height: normal;
+    }
+    
+    .api {
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    
+    #name-api {
+        font-size: 2rem;
+        border-top-left-radius: 30px;
+    }
+    
+    .texto-api {
+        display: block;
+    }
+    
+    .div-img {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #movies-api {
+        padding: 1rem;
+        font-size: medium;
+        line-height: normal;
+    }
+}
