@@ -2,8 +2,9 @@ const nomePersonagemInput = document.getElementById("input-personagem");
 const btnBusca = document.getElementById("busca");
 const containerAPI = document.querySelector(".api");
 const nomePersonagem = document.getElementById("name-api");
-const filmesPersonagem = document.getElementById("movies-api");
 const imgPersonagem = document.getElementById("img-api");
+const linkImgPersonagem = document.getElementById("img-link-api");
+const filmesPersonagem = document.getElementById("movies-api");
 let nomeTransformado = "";
 
 nomePersonagemInput.addEventListener("keypress", function(event) {
@@ -49,13 +50,14 @@ function exibeNome(nome) {
 }
 
 
-//@ Função para exibir a lista de filmes
-function exibeFilmes(arrayFilmes) {
-    arrayFilmes.map(filme => filmesPersonagem.innerHTML += `<li>${filme};</li><br>`);
+//@ Função para exibir a foto do Personagem
+function exibeFotoPersonagem(imagemPersonagem) {
+    linkImgPersonagem.setAttribute("href", imagemPersonagem);
+    imgPersonagem.setAttribute("src", imagemPersonagem);
 }
 
 
-//@ Função para exibir a foto do Personagem
-function exibeFotoPersonagem(imagemPersonagem) {
-    imgPersonagem.setAttribute("src", imagemPersonagem);
+//@ Função para exibir a lista de filmes
+function exibeFilmes(arrayFilmes) {
+    arrayFilmes.map(filme => filmesPersonagem.innerHTML += `<li>${filme};</li><br>`);
 }
